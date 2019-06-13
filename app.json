@@ -1,0 +1,31 @@
+{
+  "name": "Kujaku",
+  "description": "Slack App that to unfurl url of esa.io",
+  "keywords": [
+    "productivity",
+    "team",
+    "esa",
+    "slack"
+  ],
+  "repository": "https://github.com/FromAtom/Kujaku",
+  "env": {
+    "SLACK_OAUTH_ACCESS_TOKEN": {
+      "description": "ex) xoxp-XXXXXXXX-XXXXXXXX-XXXXX"
+    },
+    "ESA_ACCESS_TOKEN": {
+      "description": "Personal Access Token (Require read permission)"
+    },
+    "ESA_TEAM_NAME": {
+      "description": "Esa team name of targeted for URL unfurling"
+    }
+  },
+  "image": "heroku/ruby",
+  "addons": [
+    {
+      "plan": "redistogo:nano"
+    },
+    {
+      "plan": "papertrail"
+    }
+  ]
+}
