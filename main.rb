@@ -33,6 +33,9 @@ post '/' do
       esa = EsaClient.new
       attachment = esa.get(post_number)
 
+      # 内容テキストは削除
+      attachment.delete(:text)
+
       unfurls[url] = attachment
     end
 
