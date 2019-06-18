@@ -44,15 +44,11 @@ class EsaClient
     title.insert(0, '[WIP] ') if post['wip']
     footer = generate_footer(post)
 
-    # 素のままだと省略されても長いので10行までにする
-    text = post['body_md'].lines[0, 10].map{ |item| item.chomp }.join("\n")
-
     info = {
       title: title,
       title_link: post['url'],
       author_name: post['created_by']['screen_name'],
       author_icon: post['created_by']['icon'],
-      text: text,
       color: '#3E8E89',
       footer: footer
     }
